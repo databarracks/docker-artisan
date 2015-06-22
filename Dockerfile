@@ -23,9 +23,7 @@ RUN apt-get clean \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /var/www/html
-
-WORKDIR /var/www/html
+WORKDIR /app
 
 ENTRYPOINT ["php", "artisan"]
 
